@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Apolion Fumigaciones </title>
+    
+    
+    <!-- ICONO whatsapp -->
+     <link rel="icon" type="image/png" href="https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/5c90a96f-e337-4e7e-8ee0-a9b1c6a73a7d%20(3).png">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #252525;
+            background: #fff;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            height: 82px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 56px;
+            border: 4px solid #0B4F7C;
+            border-radius: 45% 45% 50% 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0B4F7C;
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .logo-icon::after {
+            content: "✓";
+        }
+
+        .logo-text {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo-text span {
+            color: #0B4F7C;
+        }
+
+        .logo-subtitle {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #555;
+            margin-top: 2px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        nav a {
+            color: #292929;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            padding: 30px 0;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #0B4F7C;
+        }
+
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 17px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #0B4F7C;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 24px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #188a42;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-icon {
+            width: 23px;
+            height: 23px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 480px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.82) 0%,
+                    rgba(0,0,0,0.67) 40%,
+                    rgba(0,0,0,0.15) 100%
+                ),
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/c807ae94-3396-418d-a8f9-52938be2febb (1).png");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 70px 9%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            line-height: 1.12;
+            margin-bottom: 22px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 550px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 16px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2F8BC5;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0B4F7C;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #222;
+        }
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits {
+            max-width: 85%;
+            margin: -35px auto 0;
+            background: white;
+            position: relative;
+            z-index: 5;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 25px 20px;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 5px 25px;
+            border-right: 1px solid #ddd;
+        }
+
+        .benefit:last-child {
+            border-right: none;
+        }
+
+        .benefit-icon {
+            min-width: 50px;
+            height: 50px;
+            border: 2px solid #4D9ED1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4D9ED1;
+            font-size: 22px;
+        }
+
+        .benefit h3 {
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+
+        .benefit p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 75px 7% 80px;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #2B78B8;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 45px;
+        }
+
+        .section-line {
+            width: 50px;
+            height: 3px;
+            background: #72B9E8;
+            margin: -30px auto 35px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 9px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.09);
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-image.plagas {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/6c871472-b48c-43f0-897e-50b38477d60e.png");
+        }
+
+        .service-image.comercial {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/cae47bf0-b746-4459-896f-a92b77b35587.png");
+        }
+
+        .service-image.industrial {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/7d50ba9f-8bd1-47d8-aca3-df97fa616792.png");
+        }
+
+        .service-image.residencial {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/c686b21d-b198-4d81-92ef-773f0e2264db.png");
+        }
+
+        .service-image.colegios {
+            background-image: 
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/5a33bdb1-56e2-4ff7-9bfe-f2bb5b6c69fb.png");
+    
+}
+        .service-image.vehiculos {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/874e26c8-42b3-4ff4-8f4f-bdb7c7125a39.png");
+    }
+
+        .service-content {
+            padding: 22px;
+            position: relative;
+        }
+
+        .service-icon {
+            width: 46px;
+            height: 46px;
+            background: #2F8BC5;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            position: absolute;
+            top: -24px;
+            left: 20px;
+            border: 4px solid white;
+        }
+
+        .service-content h3 {
+            margin-top: 12px;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .service-content p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #EEF6FC;
+            padding: 80px 9%;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .about-image {
+            height: 400px;
+            border-radius: 12px;
+            background:
+                linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+                url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-text .section-label {
+            margin-bottom: 12px;
+        }
+
+        .about-text h2 {
+            font-size: 34px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 13px;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #4D9ED1;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            padding: 80px 9%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: linear-gradient(90deg, #0B4F7C 0%, #2B78B8 100%);
+            color: white;
+            padding: 45px 9%;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .contact h2 {
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .contact p {
+            font-size: 14px;
+        }
+
+        .contact-button {
+            background: white;
+            color: #145F93;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            background: #eeeeee;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #062B4F;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            font-size: 13px;
+        }
+
+        
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            nav {
+                gap: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefit {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            header {
+                padding: 0 5%;
+                height: 70px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .logo-text {
+                font-size: 21px;
+            }
+
+            .whatsapp-btn {
+                padding: 12px 16px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 70px 7%;
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                max-width: 260px;
+            }
+
+            .benefits {
+                max-width: 90%;
+                grid-template-columns: 1fr;
+                margin-top: -20px;
+            }
+
+            .benefit {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding: 15px 5px;
+            }
+
+            .benefit:last-child {
+                border-bottom: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <a href="#inicio" style="display:flex; align-items:center; text-decoration:none; margin-left:20px;">
+    <img 
+        src="https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/ChatGPT%20Image%2014%20ago%202026,%2020_23_02.png"
+        alt="Apolión Fumigaciones"
+        style="height:76px; width:auto; display:block;"
+    >
+</a>
+
+
+        <nav>
+            <a href="#inicio" class="active">INICIO</a>
+            <a href="#servicios">SERVICIOS</a>
+            <a href="#nosotros">SOBRE NOSOTROS</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacto">CONTACTO</a>
+        </nav>
+
+
+        <!-- BOTÓN WHATSAPP -->
+        <a
+            href="https://wa.me/5491112345678"
+            target="_blank"
+            class="whatsapp-btn"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            CONTACTAR
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>
+                PROTEGEMOS LO QUE<br>
+                MÁS TE <span>IMPORTA</span>
+            </h1>
+
+            <p>
+                Brindamos servicios de fumigación profesionales
+                para hogares, comercios e industrias.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contacto" class="btn-primary">
+                    SOLICITÁ TU PRESUPUESTO
+                </a>
+
+                <a href="#servicios" class="btn-secondary">
+                    CONOCÉ NUESTROS SERVICIOS
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFICIOS
+    ========================== -->
+
+    <section class="benefits">
+
+        <div class="benefit">
+
+            <i class="fa-solid fa-shield-halved info-icono benefit-icon"></i>
+
+            <div>
+                <h3>EFECTIVOS Y SEGUROS</h3>
+                <p>
+                    Productos aprobados y seguros
+                    para personas y mascotas.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <i class="fa-solid fa-users info-icono benefit-icon"></i>
+
+            <div>
+                <h3>TÉCNICOS ESPECIALIZADOS</h3>
+                <p>
+                    Profesionales capacitados para
+                    cada tipo de servicio.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <i class="fa-solid fa-circle-info benefit-icon"></i>
+
+            <div>
+                <h3>ATENCIÓN PERSONALIZADA</h3>
+                <p>
+                    Evaluamos tu caso y ofrecemos
+                    la mejor solución.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+        
+            <i class="fa-solid fa-rocket benefit-icon"></i>
+            <div>
+                <h3>RÁPIDOS Y PUNTUALES</h3>
+                <p>
+                    Llegamos a tiempo y realizamos
+                    el trabajo de forma eficiente.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+
+    <section class="services" id="servicios">
+
+        <div class="section-label">
+            SERVICIOS
+        </div>
+
+        <h2 class="section-title">
+            SOLUCIONES A MEDIDA
+        </h2>
+
+        <div class="section-line"></div>
+
+
+        <div class="services-grid">
+
+
+            <!-- CARD 1 -->
+
+            <div class="service-card">
+
+               <a href="control-de-plagas.html">
+                    <div class="service-image plagas"></div>
+                </a>
+                <div class="service-content">
+
+                    <div class="service-icon fa-solid fa-spider"></div>
+                    
+                    <h3>CONTROL DE PLAGAS</h3>
+
+                    <p>
+                        Eliminamos insectos y roedores
+                        de manera efectiva y segura.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="service-card">
+
+                <a href="fumigacion-comercial.html">
+                    <div class="service-image comercial"></div>
+                </a>
+
+
+                <div class="service-content">
+
+                    <div class="service-icon fa-solid fa-shop"></div>
+
+                    <h3>FUMIGACIÓN COMERCIAL</h3>
+
+                    <p>
+                        Servicios para comercios,
+                        oficinas, restaurantes y más.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="service-card">
+
+                <a href="fumigacion-industrial.html">
+                    <div class="service-image industrial"></div>
+                </a>
+
+                <div class="service-content">
+
+                    <div class="service-icon fa-solid fa-building "></div>
+
+                    <h3>FUMIGACIÓN INDUSTRIAL</h3>
+
+                    <p>
+                        Planes especiales para industrias,
+                        depósitos y grandes superficies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="service-card">
+
+                <a href="fumigacion-residencial.html">
+            <div class="service-image residencial"></div>
+                </a>
+
+                <div class="service-content">
+
+                    <div class="service-icon fa-solid fa-house"></div>
+
+                    <h3>FUMIGACIÓN RESIDENCIAL</h3>
+
+                    <p>
+                        Protegemos tu hogar y familia
+                        con tratamientos seguros y duraderos.
+                    </p>
+
+                </div>
+
+            </div>
+
+             <!-- CARD 5 -->
+
+            <div class="service-card">
+
+                <a href="fumigacion-colegios.html">
+            <div class="service-image colegios"></div>
+                </a>
+
+                <div class="service-content">
+
+                   <div class="service-icon fa-solid fa-school"></div>
+
+                    <h3>FUMIGACIÓN EN COLEGIOS</h3>
+
+                    <p>
+                        Tratamientos para colegios, jardines e instituciones
+            educativas, adaptados a cada espacio y necesidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+              <!-- CARD 6 -->
+
+            <div class="service-card">
+
+                <a href="desinfección-de-vehiculos.html">
+            <div class="service-image vehiculos"></div>
+                </a>
+
+                <div class="service-content">
+
+                   <div class="service-icon fa-solid fa-truck"></div>
+
+                    <h3>DESINFECCIÓN DE VEHÍCULOS</h3>
+
+                    <p>
+                       Servicio profesional para autos, combis, micros,
+            transporte escolar, camiones y flotas empresariales.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE NOSOTROS
+    ========================== -->
+
+    <section class="about" id="nosotros">
+
+        <div class="about-container">
+
+            <div class="about-image"></div>
+
+
+            <div class="about-text">
+
+                <div class="section-label">
+                    SOBRE NOSOTROS
+                </div>
+
+                <h2>
+                    Cuidamos tus espacios
+                    como si fueran nuestros
+                </h2>
+
+                <p>
+                    En Apolion Fumigaciones nos especializamos en el
+                    control y prevención de plagas para hogares,
+                    comercios e industrias.
+                </p>
+
+                <p>
+                    Trabajamos con profesionales capacitados
+                    y soluciones adaptadas a cada necesidad.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>Atención personalizada</li>
+
+                    <li>Personal capacitado</li>
+
+                    <li>Soluciones efectivas</li>
+
+                    <li>Presupuestos sin compromiso</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="faq" id="faq" style="margin-left:0; margin-right:auto; padding-left: 14%; padding-right:7%;">
+
+        <div class="section-label">
+            PREGUNTAS FRECUENTES
+        </div>
+
+        <h2 class="section-title">
+            ¿TENÉS ALGUNA DUDA?
+        </h2>
+
+        <div class="section-line"></div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿Qué tipos de plagas controlan?
+            </h3>
+
+            <p>
+                Realizamos tratamientos para cucarachas,
+                hormigas, mosquitos, roedores y otras plagas.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿El servicio es seguro para mascotas?
+            </h3>
+
+            <p>
+                Evaluamos cada situación y brindamos las
+                indicaciones correspondientes antes del tratamiento.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿Cómo puedo solicitar un presupuesto?
+            </h3>
+
+            <p>
+                Podés comunicarte con nosotros directamente
+                mediante WhatsApp y te asesoramos sin compromiso.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿Realizan servicios a domicilio?
+            </h3>
+
+            <p>
+                Sí, ofrecemos servicios para hogares,
+                comercios, oficinas e industrias.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section class="contact" id="contacto">
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div>
+
+                    <h2>
+                        ¿TENÉS DUDAS O QUERÉS UN PRESUPUESTO?
+                    </h2>
+
+                    <p>
+                        Escribinos por WhatsApp y te respondemos
+                        sin compromiso.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/5491131952683"
+                target="_blank"
+                class="contact-button"
+            >
+            
+                CONTACTAR AHORA
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 Apolion Fumigaciones —
+        Control de plagas y fumigación.
+
+    </footer>
+<!-- =========================
+         RESALTADOR PALABRAS
+    ========================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    function cambiarSeccionActiva() {
+
+        let actual = "";
+
+        sections.forEach(section => {
+
+            const arriba = section.offsetTop - 140;
+            const alto = section.offsetHeight;
+
+            if (
+                window.scrollY >= arriba &&
+                window.scrollY < arriba + alto
+            ) {
+                actual = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + actual) {
+                link.classList.add("active");
+            }
+
+        });
+    }
+
+    window.addEventListener("scroll", cambiarSeccionActiva);
+
+    cambiarSeccionActiva();
+
+});
+</script>
+   
+
+
+</body>
+</html>
