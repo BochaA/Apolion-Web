@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desinfección de Empresas y Establecimientos | Apolión Fumigaciones</title>
+
+    <link rel="icon" type="image/png" href="https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/5c90a96f-e337-4e7e-8ee0-a9b1c6a73a7d%20(3).png">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #252525;
+            background: #fff;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            height: 82px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .logo-link img {
+            height: 76px;
+            width: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+        }
+
+        nav a {
+            color: #292929;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            padding: 30px 0;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #0B4F7C;
+        }
+
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 17px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #0B4F7C;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 24px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #188a42;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 500px;
+            background:
+                linear-gradient( 
+                    90deg,
+                    rgba(0, 0, 0, 0.84) 0%,
+                    rgba(0,0,0,0.67) 42%,
+                    rgba(0,0,0,0.18) 100%
+                ),
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/c23ff51e-9aaf-45f8-9b2a-de317c1612dd.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 70px 9%;
+            color: rgb(255, 255, 255);
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero-label {
+            color: #72B9E8;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+            margin-bottom: 14px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            line-height: 1.12;
+            margin-bottom: 22px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 30px;
+            max-width: 620px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 16px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2F8BC5;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0B4F7C;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #222;
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        .section {
+            padding: 80px 9%;
+        }
+
+        .section-light {
+            background: #EEF6FC;
+        }
+
+        .section-label {
+            color: #2B78B8;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-line {
+            width: 50px;
+            height: 3px;
+            background: #72B9E8;
+            margin: -30px auto 35px;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            max-width: 1180px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 34px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .intro-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 17px;
+            font-size: 15px;
+        }
+
+        .intro-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.09);
+            padding: 35px;
+            border-top: 4px solid #2F8BC5;
+        }
+
+        .intro-card .big-icon {
+            width: 62px;
+            height: 62px;
+            background: #E8F4FB;
+            color: #2F8BC5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .intro-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .intro-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROCESO
+        ========================= */
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 22px;
+            max-width: 1260px;
+            margin: auto;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 9px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.09);
+            padding: 28px 22px;
+            transition: 0.3s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: #2F8BC5;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .step-card h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ESPACIOS
+        ========================= */
+
+        .spaces-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 22px;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .space-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.09);
+            padding: 28px 18px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .space-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .space-card i {
+            color: #2F8BC5;
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .space-card h3 {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* =========================
+           DOS BLOQUES
+        ========================= */
+
+        .double-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .info-panel {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+        }
+
+        .info-panel h3 {
+            font-size: 22px;
+            color: #153b52;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            margin-bottom: 14px;
+            display: flex;
+            gap: 12px;
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .check-list i {
+            color: #2F8BC5;
+            margin-top: 2px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        /* =========================
+           TRES COLUMNAS
+        ========================= */
+
+        .triple-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .triple-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.09);
+            padding: 28px 24px;
+            transition: .3s;
+        }
+
+        .triple-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .triple-card i {
+            color: #2F8BC5;
+            font-size: 34px;
+            margin-bottom: 16px;
+        }
+
+        .triple-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .triple-card ul {
+            list-style: none;
+        }
+
+        .triple-card li {
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .triple-card li::before {
+            content: "✓";
+            color: #72B9E8;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contact {
+            background: linear-gradient(90deg, #0B4F7C 0%, #2B78B8 100%);
+            color: white;
+            padding: 45px 9%;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .contact h2 {
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .contact p {
+            font-size: 14px;
+        }
+
+        .contact-button {
+            background: white;
+            color: #145F93;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            background: #eeeeee;
+        }
+
+        footer {
+            background: #062B4F;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1100px) {
+            nav {
+                gap: 20px;
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .spaces-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .triple-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 750px) {
+            header {
+                padding: 0 5%;
+                height: 70px;
+            }
+
+            .logo-link {
+                margin-left: 0;
+            }
+
+            .logo-link img {
+                height: 62px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .whatsapp-btn {
+                padding: 12px 16px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 65px 7%;
+                min-height: 540px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                max-width: 280px;
+            }
+
+            .intro,
+            .double-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                display: grid;
+            }
+
+            .steps-grid,
+            .spaces-grid,
+            .triple-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 65px 7%;
+            }
+
+            .contact-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <img
+                src="https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/ChatGPT%20Image%2014%20ago%202026,%2020_23_02.png"
+                alt="Apolión Fumigaciones"
+            >
+        </a>
+
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="#servicio" class="active">¿QUE DESINFECTAMOS?</a>
+            <a href="#proceso" class="active">PROCESO</a>
+            
+        </nav>
+
+        <a
+            href="https://wa.me/5491131952683"
+            target="_blank"
+            class="whatsapp-btn"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            CONTACTAR
+        </a>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" >
+        <div class="hero-content">
+            <div class="hero-label">SERVICIO PROFESIONAL PARA EMPRESAS E INSTITUCIONES</div>
+
+            <h1>
+                DESINFECCIÓN DE <span>EMPRESAS Y ESTABLECIMIENTOS</span>
+            </h1>
+
+            <p>
+                Realizamos desinfección profesional para empresas, oficinas,
+                colegios y distintos establecimientos, adaptando cada servicio
+                a las características del espacio y al tipo de actividad.
+            </p>
+
+            
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section">
+        <div class="intro">
+            <div class="intro-text">
+                <div class="section-label" style="text-align:left;">
+                    DESINFECCIÓN DE EMPRESAS, OFICINAS Y COLEGIOS
+                </div>
+
+                <h2>
+                    Protegemos los espacios donde desarrollás tu actividad
+                </h2>
+
+                <p>
+                    La desinfección de establecimientos es un servicio orientado
+                    a mejorar las condiciones higiénicas del ambiente,
+                    actuando sobre superficies de contacto frecuente y sectores
+                    de uso cotidiano.
+                </p>
+
+                <p>
+                    Antes de realizar la aplicación evaluamos el lugar y definimos
+                    el tratamiento más adecuado según el tipo de espacio,
+                    su uso y la metodología de trabajo necesaria.
+                </p>
+
+                <p>
+                    El servicio puede realizarse en empresas, oficinas,
+                    colegios, industrias, depósitos y otros establecimientos.
+                </p>
+            </div>
+
+            <div class="intro-card">
+                <div class="big-icon">
+                    <i class="fa-solid fa-spray-can-sparkles"></i>
+                </div>
+
+                <h3>Aplicación adaptada a cada establecimiento</h3>
+
+                <p>
+                    Utilizamos pulverización, nebulización o termonebulización
+                    según las características del espacio y del servicio
+                    a realizar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPACIOS -->
+    <section class="section" id="servicio">
+        <div class="section-label">TIPOS DE ESPACIOS</div>
+        <h2 class="section-title">ESTABLECIMIENTOS QUE DESINFECTAMOS</h2>
+        <div class="section-line"></div>
+
+        <div class="spaces-grid">
+            <div class="space-card">
+                <i class="fa-solid fa-building"></i>
+                <h3>Empresas</h3>
+            </div>
+
+            <div class="space-card">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Oficinas</h3>
+            </div>
+
+            <div class="space-card">
+                <i class="fa-solid fa-school"></i>
+                <h3>Colegios</h3>
+            </div>
+
+            <div class="space-card">
+                <i class="fa-solid fa-industry"></i>
+                <h3>Industrias</h3>
+            </div>
+
+            <div class="space-card">
+                <i class="fa-solid fa-warehouse"></i>
+                <h3>Depósitos</h3>
+            </div>
+
+            <div class="space-card">
+                <i class="fa-solid fa-building-shield"></i>
+                <h3>Otros establecimientos</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROCESO -->
+    <section class="section section-light" id="proceso">
+        <div class="section-label">CÓMO REALIZAMOS EL SERVICIO</div>
+        <h2 class="section-title">PROCESO DE DESINFECCIÓN</h2>
+        <div class="section-line"></div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>EVALUACIÓN</h3>
+                <p>
+                    Evaluamos el establecimiento y definimos el tratamiento
+                    más adecuado para cada espacio.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>PREPARACIÓN</h3>
+                <p>
+                    Organizamos la aplicación según las características
+                    del lugar y las áreas a tratar.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>APLICACIÓN</h3>
+                <p>
+                    Utilizamos pulverización, nebulización o termonebulización
+                    según corresponda.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>TRATAMIENTO</h3>
+                <p>
+                    Desinfectamos principalmente superficies de contacto frecuente
+                    y sectores de uso habitual.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <h3>VENTILACIÓN</h3>
+                <p>
+                    Respetamos el tiempo de acción del producto y la ventilación
+                    antes de volver a utilizar el espacio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- SEGURIDAD + QUÉ INCLUYE -->
+    <section class="section section-light">
+        <div class="double-grid">
+            <div class="info-panel">
+                <h3>Seguridad durante la aplicación</h3>
+
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Utilizamos productos habilitados.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Aplicamos procedimientos adaptados a cada espacio.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> La aplicación se realiza sobre superficies y sectores de mayor contacto.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Respetamos los tiempos de acción y ventilación.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Trabajamos con equipos adecuados según el servicio.</li>
+                </ul>
+            </div>
+
+            <div class="info-panel">
+                <h3>¿Qué incluye el servicio?</h3>
+
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Evaluación previa del establecimiento.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Desinfección del espacio según corresponda.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Tratamiento de superficies de contacto frecuente.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Aplicación con equipos profesionales.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Certificado del servicio.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Carpeta técnica respaldatoria.</li>
+                </ul>
+
+                <p class="note">
+                    *La documentación entregada puede variar según el tipo de establecimiento y el servicio realizado.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRES COLUMNAS -->
+    <section class="section">
+        <div class="section-label">INFORMACIÓN ÚTIL</div>
+        <h2 class="section-title">APLICACIÓN, BENEFICIOS Y DOCUMENTACIÓN</h2>
+        <div class="section-line"></div>
+
+        <div class="triple-grid">
+            <div class="triple-card">
+                <i class="fa-solid fa-spray-can-sparkles"></i>
+                <h3>Aplicación</h3>
+                <ul>
+                    <li>Pulverización según corresponda.</li>
+                    <li>Nebulización cuando el servicio lo requiera.</li>
+                    <li>Termonebulización en casos específicos.</li>
+                    <li>Adaptación al tipo de espacio.</li>
+                    <li>Tratamiento sobre sectores de mayor contacto.</li>
+                </ul>
+            </div>
+
+            <div class="triple-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Beneficios</h3>
+                <ul>
+                    <li>Mejora las condiciones higiénicas del ambiente.</li>
+                    <li>Servicio adaptado a cada establecimiento.</li>
+                    <li>Aplicación profesional y organizada.</li>
+                    <li>Ideal para empresas, oficinas y colegios.</li>
+                    <li>Mayor tranquilidad para el uso cotidiano del espacio.</li>
+                </ul>
+            </div>
+
+            <div class="triple-card">
+                <i class="fa-solid fa-folder-open"></i>
+                <h3>Documentación</h3>
+                <ul>
+                    <li>Certificado del servicio realizado.</li>
+                    <li>Carpeta técnica respaldatoria.</li>
+                    <li>Documentación para requerimientos municipales.</li>
+                    <li>Respaldo del tratamiento efectuado.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div>
+                    <h2>¿QUERÉS COTIZAR LA DESINFECCIÓN DE TU EMPRESA O ESTABLECIMIENTO?</h2>
+                    <p>
+                        Escribinos indicando el tipo de espacio, la localidad
+                        y el servicio que necesitás realizar.
+                    </p>
+                </div>
+            </div>
+
+            <a
+                href="https://wa.me/5491131952683"
+                target="_blank"
+                class="contact-button"
+            >
+                CONTACTAR AHORA
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Apolión Fumigaciones — Desinfección profesional de empresas y establecimientos.
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+            function cambiarSeccionActiva() {
+                let actual = "";
+
+                sections.forEach(section => {
+                    const arriba = section.offsetTop - 140;
+                    const alto = section.offsetHeight;
+
+                    if (
+                        window.scrollY >= arriba &&
+                        window.scrollY < arriba + alto
+                    ) {
+                        actual = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+
+                    if (link.getAttribute("href") === "#" + actual) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", cambiarSeccionActiva);
+            cambiarSeccionActiva();
+        });
+    </script>
+
+</body>
+</html>
