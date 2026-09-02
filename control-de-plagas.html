@@ -193,7 +193,120 @@
             color: #222;
         }
 
-        
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 75px 7% 80px;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #2B78B8;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 45px;
+        }
+
+        .section-line {
+            width: 50px;
+            height: 3px;
+            background: #72B9E8;
+            margin: -30px auto 35px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 9px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.09);
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+        }
+
+       
+        .service-image.comercial {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/cae47bf0-b746-4459-896f-a92b77b35587.png");
+        }
+
+        .service-image.industrial {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/7d50ba9f-8bd1-47d8-aca3-df97fa616792.png");
+        }
+
+        .service-image.residencial {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/c686b21d-b198-4d81-92ef-773f0e2264db.png");
+        }
+
+        .service-image.colegios {
+            background-image: 
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/5a33bdb1-56e2-4ff7-9bfe-f2bb5b6c69fb.png");
+    
+}
+        .service-image.vehiculos {
+            background-image:
+                url("https://6a7f7045eddb637bcd4ddf46.imgix.net/sandbox/874e26c8-42b3-4ff4-8f4f-bdb7c7125a39.png");
+    }
+
+        .service-content {
+            padding: 22px;
+            position: relative;
+        }
+
+        .service-icon {
+            width: 46px;
+            height: 46px;
+            background: #2F8BC5;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            position: absolute;
+            top: -24px;
+            left: 20px;
+            border: 4px solid white;
+        }
+
+        .service-content h3 {
+            margin-top: 12px;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .service-content p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
 
         /* =========================
            SECCIONES GENERALES
@@ -634,7 +747,7 @@
         <nav>
             <a href="index.html">INICIO</a>
             <a href="#control" class="active">CONTROL DE PLAGAS</a>
-            <a href="#contacto">CONTACTO</a>
+            <a href="#servicios">SERVICIOS</a>
         </nav>
 
         <a href="https://wa.me/5491131952673"
@@ -663,6 +776,7 @@
             
         </div>
     </section>
+
 
     
     <!-- INTRO -->
@@ -753,6 +867,7 @@
         </div>
     </section>
 
+    
     <!-- ESTRATEGIAS -->
     <section class="section">
         <div class="section-label">ESTRATEGIAS DE CONTROL</div>
@@ -800,6 +915,176 @@
             </div>
         </div>
     </section>
+
+
+<!-- =========================
+         RESALTADOR PALABRAS
+    ========================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    function cambiarSeccionActiva() {
+
+        let actual = "";
+
+        sections.forEach(section => {
+
+            const arriba = section.offsetTop - 140;
+            const alto = section.offsetHeight;
+
+            if (
+                window.scrollY >= arriba &&
+                window.scrollY < arriba + alto
+            ) {
+                actual = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + actual) {
+                link.classList.add("active");
+            }
+
+        });
+    }
+
+    window.addEventListener("scroll", cambiarSeccionActiva);
+
+    cambiarSeccionActiva();
+
+});
+</script>
+
+
+
+
+
+
+    <!--SERVICIOS-->
+
+<section class="services" id="servicios">
+
+        
+
+        <h2 class="section-title">
+            UN SERVICIO PARA CADA NECESIDAD
+        </h2>
+
+        <div class="section-line"></div>
+
+
+        <div class="services-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="service-card">
+
+                <a href="fumigacion-comercial.html">
+                    <div class="service-image comercial"></div>
+                </a>
+
+
+                <div class="service-content">
+
+                    <div class="service-icon fa-solid fa-shop"></div>
+
+                    <h3>COMERCIOS</h3>
+
+                    <p>
+                        Servicios para comercios,
+                        oficinas, restaurantes y más.
+                    </p>
+
+                </div>
+
+            </div>
+
+                    <!-- CARD 2 -->
+
+            <div class="service-card">
+
+                <a href="fumigacion-residencial.html">
+            <div class="service-image residencial"></div>
+                </a>
+
+                <div class="service-content">
+
+                    <div class="service-icon fa-solid fa-house"></div>
+
+                    <h3>RESIDENCIAS</h3>
+
+                    <p>
+                        Protegemos tu hogar y familia
+                        con tratamientos seguros y duraderos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            
+            <!-- CARD 3 -->
+
+            <div class="service-card">
+
+                <a href="fumigacion-industrial.html">
+                    <div class="service-image industrial"></div>
+                </a>
+
+                <div class="service-content">
+
+                    <div class="service-icon fa-solid fa-building "></div>
+
+                    <h3>INDUSTRIAS</h3>
+
+                    <p>
+                        Planes especiales para industrias,
+                        depósitos y grandes superficies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+                         <!-- CARD 4 -->
+
+            <div class="service-card" ;">
+
+                <a href="fumigacion-colegios.html">
+            <div class="service-image colegios"></div>
+                </a>
+
+                <div class="service-content">
+
+                   <div class="service-icon fa-solid fa-school"></div>
+
+                    <h3>COLEGIOS</h3>
+
+                    <p>
+                        Tratamientos para colegios, jardines e instituciones
+            educativas, adaptados a cada espacio y necesidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+           
+
+    </section>
+
 
     <!-- PLAGAS -->
     <section class="section section-light">
@@ -853,7 +1138,7 @@
                 </div>
             </div>
 
-            <a href="https://wa.me/5491131952673"
+            <a href="https://wa.me/5491131952683"
                target="_blank"
                class="contact-button">
                 CONTACTAR AHORA
